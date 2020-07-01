@@ -3,4 +3,4 @@ project(LIB_CPPDL)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LIB_CPPDL main.cpp)
+add_executable(LIB_CPPDL main.cpp src/slp/single_perceptron.h src/slp/single_perceptron.cpp)

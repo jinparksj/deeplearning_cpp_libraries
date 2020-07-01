@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/slp/single_perceptron.o: src/slp/single_perceptron.cpp.o
+
+.PHONY : src/slp/single_perceptron.o
+
+# target to build an object file
+src/slp/single_perceptron.cpp.o:
+	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o
+.PHONY : src/slp/single_perceptron.cpp.o
+
+src/slp/single_perceptron.i: src/slp/single_perceptron.cpp.i
+
+.PHONY : src/slp/single_perceptron.i
+
+# target to preprocess a source file
+src/slp/single_perceptron.cpp.i:
+	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.i
+.PHONY : src/slp/single_perceptron.cpp.i
+
+src/slp/single_perceptron.s: src/slp/single_perceptron.cpp.s
+
+.PHONY : src/slp/single_perceptron.s
+
+# target to generate assembly for a file
+src/slp/single_perceptron.cpp.s:
+	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.s
+.PHONY : src/slp/single_perceptron.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/slp/single_perceptron.o"
+	@echo "... src/slp/single_perceptron.i"
+	@echo "... src/slp/single_perceptron.s"
 .PHONY : help
 
 

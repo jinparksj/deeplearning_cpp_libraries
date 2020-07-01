@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/gf/GFProject/LIB_CPPDL/cmake-build-debug
 CMakeFiles/LIB_CPPDL.dir/all:
 	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/depend
 	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target LIB_CPPDL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target LIB_CPPDL"
 .PHONY : CMakeFiles/LIB_CPPDL.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/LIB_CPPDL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LIB_CPPDL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gf/GFProject/LIB_CPPDL/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gf/GFProject/LIB_CPPDL/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LIB_CPPDL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gf/GFProject/LIB_CPPDL/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/LIB_CPPDL.dir/rule

@@ -1,6 +1,9 @@
 #include <iostream>
 
+#include "example_slp.h"
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    ExampleSLP();
     return 0;
 }
+

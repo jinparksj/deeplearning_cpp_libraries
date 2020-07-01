@@ -87,6 +87,12 @@
 		<Unit filename="/home/gf/GFProject/LIB_CPPDL/main.cpp">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.cpp">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.h">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
 		<Unit filename="/home/gf/GFProject/LIB_CPPDL/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
