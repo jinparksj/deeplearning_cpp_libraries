@@ -6,17 +6,57 @@
 
 #IncludeRegexTransform: 
 
-/home/gf/GFProject/LIB_CPPDL/example_slp.h
+/home/jin/project/DLCPP/example_slp.h
 src/slp/single_perceptron.h
-/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.h
+/home/jin/project/DLCPP/src/slp/single_perceptron.h
 
-/home/gf/GFProject/LIB_CPPDL/main.cpp
+/home/jin/project/DLCPP/main.cpp
 iostream
 -
 example_slp.h
-/home/gf/GFProject/LIB_CPPDL/example_slp.h
+/home/jin/project/DLCPP/example_slp.h
+src/Variable/Variable.h
+/home/jin/project/DLCPP/src/Variable/Variable.h
 
-/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.h
+/home/jin/project/DLCPP/src/Variable/Variable.cpp
+Variable.h
+/home/jin/project/DLCPP/src/Variable/Variable.h
+
+/home/jin/project/DLCPP/src/Variable/Variable.h
+list
+-
+random
+-
+boost/intrusive_ptr.hpp
+-
+memory
+-
+../cudaMat/cudaMat.h
+/home/jin/project/DLCPP/src/cudaMat/cudaMat.h
+
+/home/jin/project/DLCPP/src/cudaMat/cudaMat.h
+iostream
+-
+cuda_runtime.h
+-
+cmath
+-
+random
+-
+sstream
+-
+map
+-
+boost/serialization/export.hpp
+-
+boost/serialization/serialization.hpp
+-
+boost/serialization/vector.hpp
+-
+cublas_v2.h
+-
+
+/home/jin/project/DLCPP/src/slp/single_perceptron.h
 iostream
 -
 

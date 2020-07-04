@@ -1,4 +1,4 @@
-/home/gf/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gf/GFProject/LIB_CPPDL
+/home/jin/clion-2020.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jin/project/DLCPP
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/gf/GFProject/LIB_CPPDL/cmake-build-debug
+-- Build files have been written to: /home/jin/project/DLCPP/cmake-build-debug
