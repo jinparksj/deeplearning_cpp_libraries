@@ -1,5 +1,5 @@
 #include <iostream>
-#include "example_slp.h"
+//#include "example_slp.h"
 #include "src/Variable/Variable.h"
 
 int main() {
@@ -7,4 +7,3 @@ int main() {
     cout << "Test" << endl;
     return 0;
 }
-

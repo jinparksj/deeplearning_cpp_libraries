@@ -3,6 +3,12 @@
 - **07/01/2020 - Update Single Layer Perceptron**
 - **07/03/2020 - Ongoing Variable, cudaMat, Functions**
 
+- **cuSPARSE**
+    - CUDA sparse matrix library
+    - contains a set of basic linear algebra subsolutions used for handling sparse matrices.
+    - The library targets matrices with a number of zero elements which represent > 95% of the total entries.
+    
+
 - **cudaThreadSynchronize**
     - Wait for compute device to finish
     - Returns **cudaSuccess**
@@ -45,6 +51,9 @@
 - **CUDA Environement Comments**
     
     - Command environments
+    
+    nvcc -o main main.cpp -std=c++11 
+    ./main
     
     -ldlib -L/usr/local/cuda-9.0/lib64 -lcudnn -lpthread -lcuda -lcudart -lcublas -lcurand -lcusolver -lopencv_core -lopencv_objdetect -lopencv_highgui -lopencv_imgproc -lopencv_videoio -lopencv_imgcodecs -lopencv_dnn -lcudart -lgomp -lm -lstdc++ 
 

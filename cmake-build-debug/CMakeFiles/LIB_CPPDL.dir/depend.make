@@ -5,12 +5,6 @@ CMakeFiles/LIB_CPPDL.dir/main.cpp.o: ../example_slp.h
 CMakeFiles/LIB_CPPDL.dir/main.cpp.o: ../main.cpp
 CMakeFiles/LIB_CPPDL.dir/main.cpp.o: ../src/Variable/Variable.h
 CMakeFiles/LIB_CPPDL.dir/main.cpp.o: ../src/cudaMat/cudaMat.h
+CMakeFiles/LIB_CPPDL.dir/main.cpp.o: ../src/cudaMat/cudaMatSparse.h
 CMakeFiles/LIB_CPPDL.dir/main.cpp.o: ../src/slp/single_perceptron.h
-
-CMakeFiles/LIB_CPPDL.dir/src/Variable/Variable.cpp.o: ../src/Variable/Variable.cpp
-CMakeFiles/LIB_CPPDL.dir/src/Variable/Variable.cpp.o: ../src/Variable/Variable.h
-CMakeFiles/LIB_CPPDL.dir/src/Variable/Variable.cpp.o: ../src/cudaMat/cudaMat.h
-
-CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o: ../src/slp/single_perceptron.cpp
-CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o: ../src/slp/single_perceptron.h
 
