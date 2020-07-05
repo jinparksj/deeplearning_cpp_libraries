@@ -92,10 +92,72 @@ public:
     cudaMat() {
         rows = 0;
         cols = 0;
-//        cublasCreate()
+        cublasCreate(&cudaHandle);
+        cudaThreadSynchronize();
+    }
+
+    cudaMat(int rows, int cols) {
+        cublasCreate(&cudaHandle);
+        cudaThreadSynchronize();
+
+        new_matrix(rows, cols);
+    }
+
+    cudaMat(const cudaMat &a) {
+        cublasCreate(&cudaHandle);
+        cudaThreadSynchronize();
+
+        new_matrix(a.rows, a.cols);
+        cudaError_t error = cudaMemcpy(mDevice, a.mDevice,
+                rows * cols * sizeof(*mDevice), cudaMemcpyDeviceToHost);
+        if (error != cudaSuccess) {
+            printf("cudaMat copy constructor cudaMemcpy error\n");
+        }
+    }
+
+    ~cudaMat() {
+        del_matrix();
+        cublasDestroy(cudaHandle);
+    }
+
+    void new_matrix(int rows, int cols) {
+        cout << "new matrix cudaMat" << endl;
+        if (this -> rows != rows || this -> cols != cols) {
+            if (mDevice != NULL || mHost != NULL) {
+                del_matrix();
+            }
+            this -> rows = rows;
+            this -> cols = cols;
+
+            cudaError_t error;
+            cublasStatus_t stat;
+
+            error = cudaMalloc((void**) &mDevice,
+                    rows * cols * sizeof(*mDevice));
+
+            if (error != cudaSuccess) {
+                printf("cudaMat::new_matrix cudaMalloc error\n");
+            }
+
+            cudaMemset(mDevice, 0x00, rows * cols * sizeof(*mDevice));
+            cudaThreadSynchronize();
+            mallocCounter.up();
+        }
     }
 
 
+    void del_matrix() {
+        if (mDevice != NULL) {
+            cudaFree(mDevice);
+            mDevice = NULL;
+            mallocCounter.down();
+        }
+        if (mHost != NULL) {
+            free(mHost);
+            mHost = NULL;
+        }
+        cudaThreadSynchronize();
+    }
 };
 
 #endif //LIB_CPPDL_CUDAMAT_H

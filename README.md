@@ -1,8 +1,47 @@
 # Deep Learning C++ Libraries
 
 - **07/01/2020 - Update Single Layer Perceptron**
+- **07/03/2020 - Ongoing Variable, cudaMat, Functions**
 
+- **cudaThreadSynchronize**
+    - Wait for compute device to finish
+    - Returns **cudaSuccess**
+    - Blocks until the device has completed all preceding requested tasks.
 
+- **CUBLASE Explanation**
+    - CUBLAS? CUDA Basic Linear Algebra Subprogram
+        - Exisiting BLAS is Fortran Library. CUDA uses the existing library and creates this cuBLAS.
+        It is one of famous toolkits which NVIDIA provide as well as Fast Fourier Transform Library.
+        In addition, it is free to use. 
+    
+    - Why CUBLAS?
+        - Fast-accelerating Matrix operation is provided by cuBLAS. Exisiting openCL and Matrix example is processed by cuBLAS library.
+    
+    - What functions in CUBLAS?
+        - Based on dimension, there are 3 levels functions.
+        - Level 1: BLAS1 are functions that perform scalar, vector, and vector-vector operations.
+        - Level 2: BLAS2 are functions that perform matrix-vector operations.
+        - Level 3: BLAS3 are functions that perform matrix-matrix operations. 
+    
+    - Additional Information for CUBLAS
+        - To use CUBLAS, call the functions with matrix or vector data GPU memory needs
+        - For compatibility with Fortran, CUBLAS is column-major storage and 1-based indexing.
+        - C and C++ are row-major storage and 0-base indexing. 
+        - Therefore, for compatibility between CUBLAS and C&C++, indexing transformation macro is needed.
+            
+            -#define IDX2F(i, j, ld) (((j) - 1) * (ld)) + ((i)-1)
+                
+                - 1-based indexing
+            
+            -#define IDX2C(i, j, ld) (((j) * (ld)) + (i)) 
+                
+                - 0-based indexing for C & C++ use
+            
+            - ld: matrix leading dimension         
+    
+    
+    
+    
 - **CUDA Environement Comments**
     
     - Command environments
