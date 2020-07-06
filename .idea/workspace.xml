@@ -12,34 +12,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4423f78-7e50-4d78-9245-06347a676461" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Function/Function.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Function/Function.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cudaMat/cudaMatSparse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cudaMat/support/mat_mul_elementwise_kernel.cu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cudaMat/support/mat_mul_elementwise_kernel_exec.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/src/Variable/Variable.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/src/Variable/Variable.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/LIB_CPPDL" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/LIB_CPPDL.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/LIB_CPPDL.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Variable/Variable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variable/Variable.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Variable/Variable.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variable/Variable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cudaMat/cudaMat.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/cudaMat/cudaMat.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +94,9 @@
       <workItem from="1593817611150" duration="1240000" />
       <workItem from="1593834664367" duration="612000" />
       <workItem from="1593889658212" duration="4931000" />
-      <workItem from="1593911799194" duration="9920000" />
+      <workItem from="1593911799194" duration="10651000" />
+      <workItem from="1593988182116" duration="791000" />
+      <workItem from="1593997717992" duration="3094000" />
     </task>
     <servers />
   </component>
@@ -145,22 +136,22 @@
       <screen x="65" y="24" width="2495" height="1056" />
     </state>
     <state x="1716" y="310" width="424" height="482" key="FileChooserDialogImpl/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593925130146" />
-    <state width="1200" height="287" key="GridCell.Tab.0.bottom" timestamp="1593924286785">
+    <state width="1200" height="287" key="GridCell.Tab.0.bottom" timestamp="1593939478172">
       <screen x="65" y="24" width="2495" height="1056" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.0.bottom/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593924286785" />
-    <state width="1200" height="287" key="GridCell.Tab.0.center" timestamp="1593924286785">
+    <state width="1200" height="287" key="GridCell.Tab.0.bottom/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593939478172" />
+    <state width="1200" height="287" key="GridCell.Tab.0.center" timestamp="1593939478172">
       <screen x="65" y="24" width="2495" height="1056" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.0.center/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593924286785" />
-    <state width="1200" height="287" key="GridCell.Tab.0.left" timestamp="1593924286785">
+    <state width="1200" height="287" key="GridCell.Tab.0.center/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593939478172" />
+    <state width="1200" height="287" key="GridCell.Tab.0.left" timestamp="1593939478172">
       <screen x="65" y="24" width="2495" height="1056" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.0.left/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593924286785" />
-    <state width="1200" height="287" key="GridCell.Tab.0.right" timestamp="1593924286785">
+    <state width="1200" height="287" key="GridCell.Tab.0.left/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593939478172" />
+    <state width="1200" height="287" key="GridCell.Tab.0.right" timestamp="1593939478172">
       <screen x="65" y="24" width="2495" height="1056" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.0.right/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593924286785" />
+    <state width="1200" height="287" key="GridCell.Tab.0.right/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593939478172" />
     <state x="445" y="259" width="1625" height="729" key="SettingsEditor" timestamp="1593816730776">
       <screen x="65" y="24" width="2495" height="1056" />
     </state>

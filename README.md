@@ -2,6 +2,14 @@
 
 - **07/01/2020 - Update Single Layer Perceptron**
 - **07/03/2020 - Ongoing Variable, cudaMat, Functions**
+- **07/05/2020 - Variable**
+
+- **__ restrict __ in CUDA / Pointer Aliasing**
+    - It is an optimizing way for pointer aliasing
+    - C/C++ code cannot match FORTRAN performance, pointer aliasing is an important topic to understand when considering optimizations for C/C++ code.
+    - Two pointers alias if the memory to which they point overlaps. When a compiler can't determine whether pointers alias, it has to assume that they do.
+    - 
+
 
 - **cuSPARSE**
     - CUDA sparse matrix library

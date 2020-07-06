@@ -32,12 +32,12 @@ public:
     int *last_opt = NULL;
     bool *is_last_backward = NULL;
     int forward_count = 0;
-    Function *creator = NULL;
+    Function *creator = NULL;           //Function creating this Variable instance itself
     string name;
 
-    cudaMat data;
+    cudaMat data;                       //Result data saved at Forward
     cudaMatSparse data_sparse;
-    cudaMat grad;
+    cudaMat grad;                       //Gradient value for back propagation
     cudaMat seed;
 
     int grad_num = -999;

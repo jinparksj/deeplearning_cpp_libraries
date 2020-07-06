@@ -11,7 +11,16 @@ Variable *variable_construct(int rows, int cols) {
     for(auto itr = variable_pool.begin(); itr != variable_pool.end(); ++itr) {
         if (!itr -> second) {
             Variable *v = (Variable *)itr -> first;
-
+            if (v -> data.rows == rows && v -> data.cols == cols) {
+                v -> zeros();
+                v -> creator = NULL;
+            }
         }
     }
+}
+
+
+
+void Variable::zeros() {
+    data.mul(0, )
 }

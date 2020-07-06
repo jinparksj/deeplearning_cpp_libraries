@@ -158,6 +158,10 @@ public:
         }
         cudaThreadSynchronize();
     }
+
+    void mul(const cudaMat &m, cudaMat &r) {
+        mat_mul_elementwise_kernel_exec(mDevice)
+    }
 };
 
 #endif //LIB_CPPDL_CUDAMAT_H

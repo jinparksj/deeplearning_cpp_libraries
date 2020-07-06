@@ -87,6 +87,24 @@
 		<Unit filename="/home/jin/project/DLCPP/main.cpp">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
+		<Unit filename="/home/jin/project/DLCPP/src/Variable/Variable.cpp">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
+		<Unit filename="/home/jin/project/DLCPP/src/Variable/Variable.h">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
+		<Unit filename="/home/jin/project/DLCPP/src/cudaMat/cudaMat.h">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
+		<Unit filename="/home/jin/project/DLCPP/src/cudaMat/cudaMatSparse.h">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
+		<Unit filename="/home/jin/project/DLCPP/src/slp/single_perceptron.cpp">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
+		<Unit filename="/home/jin/project/DLCPP/src/slp/single_perceptron.h">
+			<Option target="LIB_CPPDL"/>
+		</Unit>
 		<Unit filename="/home/jin/project/DLCPP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
