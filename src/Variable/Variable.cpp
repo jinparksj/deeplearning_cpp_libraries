@@ -116,9 +116,34 @@ Variable::Variable(Function *f, cudaMat &input) {
 Variable::Variable(vector<float> &ids, int nums) {
     id = global_Variable_ID;
     global_Variable_ID++;
+
     data_sparse = cudaMatSparse(ids, nums);
+    grad = cudaMat(data_sparse.rows, data_sparse.cols);
+    seed = cudaMat(grad.rows, grad.cols);
+    seed.ones();
+
+    creator = NULL;
+
+    this -> isGetGrad = false;
+    this -> is_sparse = true;
 }
 
+Variable::~Variable() {}
+
+Variable &Variable::operator=(const Variable &a) {
+    id = global_Variable_ID;
+    global_Variable_ID++;
+
+    data = a.data;
+    grad = a.grad;
+    seed = a.seed;
+    creator = a.creator;
+
+    this -> isGetGrad = a.isGetGrad;
+    this -> is_sparse = a.is_sparse;
+
+    return *this;
+}
 
 void Variable::zeros() {
     data.mul(0, data);
@@ -128,3 +153,4 @@ void Variable::zeros() {
     is_last_backward = NULL;
     this -> creator = NULL;
 }
+

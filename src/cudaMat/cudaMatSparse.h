@@ -54,7 +54,37 @@ public:
         csrColInd = (int *) malloc(num_vals * sizeof(*csrColInd));
 
         cudaError_t error = cudaMalloc((void**) &csrValDevice, num_vals * sizeof(*csrValDevice));
-        error = cudaMalloc((void**) &csrRowPtrDevice)
+        error = cudaMalloc((void**) &csrRowPtrDevice, (rows + 1) * sizeof(*csrRowPtrDevice));
+        error = cudaMalloc((void**) &csrColIndDevice, num_vals * sizeof(*csrColIndDevice));
+
+        memset(csrRowPtr, 0x00, (rows + 1) * sizeof(*csrRowPtr));
+        csrRowPtr[0] = 0;
+        for (int i = 0; i < rows; i++) {
+            csrVal[i] = 1.;
+            csrColInd[i] = ids[i];
+            csrRowPtr[i + 1] = csrRowPtr[i] + 1;
+        }
+
+//        //to check values
+//        cout << "csrVal : ";
+//        for (int i = 0; i < num_vals; i++) {
+//            cout << csrVal[i] << " ";
+//        }
+//        cout << endl;
+//
+//        cout << "csrRowPtr : ";
+//        for (int i = 0; i < rows + 1; i++) {
+//            cout << csrRowPtr[i] << " ";
+//        }
+//        cout << endl;
+//
+//        cout << "csrColInd : ";
+//        for (int i = 0; i < num_vals; i++) {
+//            cout << csrColInd[i] << " ";
+//        }
+//        cout << endl;
+
+        memSetHost(csrVal, csrRowPtr, csrColInd);
     }
 
 };
