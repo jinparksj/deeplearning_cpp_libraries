@@ -11,6 +11,11 @@
                                 float           *C, int ldc)
     - 
 
+- **Kernel Function**
+    - Should define kernel functions as __ global __
+    - When call the kernel fucntions, <<< (blocks per grid), (threads per blocks) >>>
+    - Block is a group of threads
+    - Grid is a group of blocks
 
 - **cuSPARSE**
     - CUDA sparse matrix library
