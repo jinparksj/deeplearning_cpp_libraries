@@ -6,17 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/gf/GFProject/LIB_CPPDL/example_slp.h
-src/slp/single_perceptron.h
-/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.h
-
-/home/gf/GFProject/LIB_CPPDL/main.cpp
-iostream
--
-example_slp.h
-/home/gf/GFProject/LIB_CPPDL/example_slp.h
-
-/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.h
-iostream
--
-
