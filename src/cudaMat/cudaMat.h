@@ -14,6 +14,9 @@
 
 #include <cublas_v2.h>
 
+#include "support/MatMulElementwise/mat_mul_elementwise_kernel.h"
+#include "support/MatOnes/mat_ones_kernel.h"
+
 
 using namespace std;
 
@@ -159,8 +162,21 @@ public:
         cudaThreadSynchronize();
     }
 
+    void mul(const float alpha, cudaMat &r) {
+        float beta = 0;
+        cublasStatus_t stat = cublasSgeam(r.cudaHandle, CUBLAS_OP_N, CUBLAS_OP_N, rows, cols,
+                &alpha, mDevice, rows, &beta, r.mDevice, r.rows, r.mDevice, r.rows);
+        if (stat != CUBLAS_STATUS_SUCCESS) {
+            cout << "cannot cublasSgeam" << endl;
+        }
+        cudaThreadSynchronize();
+    }
     void mul(const cudaMat &m, cudaMat &r) {
-        mat_mul_elementwise_kernel_exec(mDevice)
+        mat_mul_elementwise_kernel_exec(mDevice, m.mDevice, r.mDevice, cols, rows);
+    }
+
+    void ones() {
+        mat_ones_kernel_exec(mDevice, mDevice, cols, rows);
     }
 };
 

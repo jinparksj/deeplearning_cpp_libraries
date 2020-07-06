@@ -14,13 +14,89 @@ Variable *variable_construct(int rows, int cols) {
             if (v -> data.rows == rows && v -> data.cols == cols) {
                 v -> zeros();
                 v -> creator = NULL;
+                variable_pool[v] = true;
+
+                return v;
             }
         }
     }
+    Variable *r = new Variable(rows, cols);
+    variable_pool[r] = true;
+
+    return r;
+}
+
+void variable_destroy(Variable *ptr){
+    count_variable--;
+
+    variable_pool[ptr] = false;
+    if (variable_pool.size() > 4000) {
+        variable_pool.erase(ptr);
+        delete ptr;
+    }
+}
+
+int global_Variable_ID = 0;
+
+Variable::Variable() {
+    id = global_Variable_ID;
+    global_Variable_ID;
+}
+
+Variable::Variable(const Variable &a) {
+    id = global_Variable_ID;
+    global_Variable_ID++;
+
+    data = a.data;
+    grad = a.grad;
+    data_sparse = a.data_sparse;
+    seed = a.seed;
+    creator = a.creator;
+    this -> isGetGrad = a.isGetGrad;
+    this -> is_sparse = a.is_sparse;
+
+}
+
+Variable::Variable(int rows, int cols) {
+    id = global_Variable_ID;
+    global_Variable_ID++;
+
+    data = cudaMat(rows, cols);
+    grad = cudaMat(rows, cols);
+    seed = cudaMat(grad.rows, grad.cols);
+    seed.ones();
+    creator = NULL;
+}
+
+Variable::Variable(int rows, int cols, bool is_get_grad) {
+    this -> isGetGrad = is_get_grad;
+
+    id = global_Variable_ID;
+    global_Variable_ID++;
+
+    data = cudaMat(rows, cols);
+    grad = cudaMat(rows, cols);
+    seed = cudaMat(grad.rows, grad.cols);
+    seed.ones();
+    creator = NULL;
+}
+
+Variable::Variable(cudaMat &input) {
+    id = global_Variable_ID;
+    global_Variable_ID++;
+    data = input;
+    grad = cudaMat(input.rows, input.cols);
+    seed = cudaMat(grad.rows, grad.cols);
+    seed.ones();
+    creator = NULL;
 }
 
 
-
 void Variable::zeros() {
-    data.mul(0, )
+    data.mul(0, data);
+    grad.mul(0, grad);
+    forward_count = 0;
+    last_opt = NULL;
+    is_last_backward = NULL;
+    this -> creator = NULL;
 }

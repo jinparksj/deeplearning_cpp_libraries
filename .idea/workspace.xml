@@ -12,23 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4423f78-7e50-4d78-9245-06347a676461" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cudaMat/support/mat_mul_elementwise_kernel.cu" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cudaMat/support/mat_mul_elementwise_kernel_exec.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cudaMat/support/MatMulElementwise/mat_mul_elementwise_kernel.cu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cudaMat/support/MatOnes/mat_ones_kernel.cu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cudaMat/support/MatOnes/mat_ones_kernel.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LIB_CPPDL.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/LIB_CPPDL.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/LIB_CPPDL.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Variable/Variable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variable/Variable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Variable/Variable.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variable/Variable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cudaMat/cudaMat.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/cudaMat/cudaMat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cudaMat/support/mat_mul_elementwise_kernel.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cudaMat/support/mat_mul_elementwise_kernel_exec.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/cudaMat/support/MatMulElementwise/mat_mul_elementwise_kernel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +53,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/cudaMat/support/MatMulElementwise" />
       <recent name="$PROJECT_DIR$/src/cudaMat" />
       <recent name="$PROJECT_DIR$/src/slp" />
       <recent name="$PROJECT_DIR$/src" />
@@ -96,7 +89,7 @@
       <workItem from="1593889658212" duration="4931000" />
       <workItem from="1593911799194" duration="10651000" />
       <workItem from="1593988182116" duration="791000" />
-      <workItem from="1593997717992" duration="3094000" />
+      <workItem from="1593997717992" duration="9089000" />
     </task>
     <servers />
   </component>
@@ -116,10 +109,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1392" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593925110963">
+    <state x="1392" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594005725936">
       <screen x="65" y="24" width="2495" height="1056" />
     </state>
-    <state x="1392" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1593925110963" />
+    <state x="1392" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.24.2495.1056/2560.0.1920.1080@65.24.2495.1056" timestamp="1594005725936" />
     <state x="1642" y="355" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593925503227">
       <screen x="65" y="24" width="2495" height="1056" />
     </state>
