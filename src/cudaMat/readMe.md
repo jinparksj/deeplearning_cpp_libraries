@@ -1,3 +1,29 @@
+- **CUDA Thread Indexing**
+    - Host (CPU)
+        - Kernel1, Kernel2, ...
+        - Kernel is connecting with Device Grid
+        - <<< (blocks per grid), (threads per blocks) >>>
+        
+    - Device (GPU)
+        - Grid1, Grid2, ...
+            - Block(0, 0), Block(1, 0), ...,   
+            Block(0, 1), Block(1, 1), ...,   
+            ...
+                - Thread(0, 0, 0), Thread(1, 0, 0), ... ,  
+                Thread(0, 1, 0), Thread(1, 1, 0), ... ,
+               
+    - Example: Thread Indexing
+        - 1D grid of 1D blocks
+            - `__device__ int getGlobalIdx_1D_1D() {`
+               
+                `return blockIdx.x *blockDim.x + threadIdx.x;`
+              
+              `}`
+        - 
+    
+        
+      
+
 
 - **cublasSgeam**
     - It is matrix-matrix operation. 
@@ -9,7 +35,7 @@
                                 const float           *beta,
                                 const float           *B, int ldb,
                                 float           *C, int ldc)
-    - 
+    
 
 - **Kernel Function**
     - Should define kernel functions as __ global __
