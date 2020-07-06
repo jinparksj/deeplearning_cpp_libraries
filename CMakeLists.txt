@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
-#project(LIB_CPPDL CUDA)
 project(LIB_CPPDL)
+#project(LIB_CPPDL CUDA)
 
 #set(CMAKE_CUDA_STANDARD 14)
 set(CMAKE_CXX_STANDARD 11)
@@ -9,7 +9,6 @@ set(CMAKE_CXX_STANDARD 11)
 #include_directories(/usr/local/cuda-9.0/lib64)
 #include_directories(/usr/local/cuda/extras/CUPTI/lib64)
 #include_directories(/usr/local/cuda-9.0)
-
 #find_package(CUDA REQUIRED)
 #include_directories("${CUDA_INCLUDE_DIRS}")
 

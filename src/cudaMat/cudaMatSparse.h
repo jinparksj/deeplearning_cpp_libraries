@@ -29,11 +29,32 @@ public:
 
     cudaMat rt, bt;
 
+public:
     cudaMatSparse() {
         cusparseCreate(&cuHandle);
         cusparseCreateMatDescr(&descr);
         cusparseSetMatType(descr, CUSPARSE_MATRIX_TYPE_GENERAL);
         cusparseSetMatIndexBase(descr, CUSPARSE_INDEX_BASE_ZERO);
+    }
+
+    cudaMatSparse(vector<float> &ids, int col_nums) : cudaMatSparse() {
+        embed(ids, col_nums);
+    }
+
+    //column-major as FORTRAN and cuBLAS usages
+    void embed(vector<float> &ids, int col_nums) {
+        rows = ids.size();
+        cols = col_nums;
+
+        int num_vals = rows;
+        numVals = num_vals;
+
+        csrVal = (float *) malloc(num_vals * sizeof(*csrVal));
+        csrRowPtr = (int *) malloc((rows + 1) * sizeof(*csrRowPtr)); // 1-based indexing
+        csrColInd = (int *) malloc(num_vals * sizeof(*csrColInd));
+
+        cudaError_t error = cudaMalloc((void**) &csrValDevice, num_vals * sizeof(*csrValDevice));
+        error = cudaMalloc((void**) &csrRowPtrDevice)
     }
 
 };
