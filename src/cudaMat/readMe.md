@@ -100,7 +100,9 @@
 
 - **cublasSgeam**
     - It is matrix-matrix operation. 
-    - cublasStatus_t cublasSgeam(cublasHandle_t handle,
+    - 
+    ```
+    cublasStatus_t cublasSgeam(cublasHandle_t handle,
                                 cublasOperation_t transa, cublasOperation_t transb,
                                 int m, int n,
                                 const float           *alpha,
@@ -108,7 +110,7 @@
                                 const float           *beta,
                                 const float           *B, int ldb,
                                 float           *C, int ldc)
-    
+    ```
 
 - **Kernel Function**
     - Should define kernel functions as __ global __
