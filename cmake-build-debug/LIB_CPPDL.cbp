@@ -8,38 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/jin/project/DLCPP/cmake-build-debug"/>
+				<Option working_dir="/home/gf/GFProject/LIB_CPPDL/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/jin/project/DLCPP/cmake-build-debug"/>
+				<Option working_dir="/home/gf/GFProject/LIB_CPPDL/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/jin/project/DLCPP/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LIB_CPPDL">
-				<Option output="/home/jin/project/DLCPP/cmake-build-debug/LIB_CPPDL" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jin/project/DLCPP/cmake-build-debug"/>
+				<Option output="/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/LIB_CPPDL" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gf/GFProject/LIB_CPPDL/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 LIB_CPPDL"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 LIB_CPPDL"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LIB_CPPDL/fast">
-				<Option output="/home/jin/project/DLCPP/cmake-build-debug/LIB_CPPDL" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jin/project/DLCPP/cmake-build-debug"/>
+				<Option output="/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/LIB_CPPDL" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gf/GFProject/LIB_CPPDL/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,35 +67,45 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 LIB_CPPDL/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jin/project/DLCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 LIB_CPPDL/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gf/GFProject/LIB_CPPDL/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/gf/GFProject/LIB_CPPDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jin/project/DLCPP/main.cpp">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/main.cpp">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
-		<Unit filename="/home/jin/project/DLCPP/src/Variable/Variable.cpp">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/Variable/Variable.cpp">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
-		<Unit filename="/home/jin/project/DLCPP/src/Variable/Variable.h">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/Variable/Variable.h">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
-		<Unit filename="/home/jin/project/DLCPP/src/cudaMat/cudaMat.h">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/cudaMat/cudaMat.h">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
-		<Unit filename="/home/jin/project/DLCPP/src/cudaMat/cudaMatSparse.h">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/cudaMat/cudaMatSparse.h">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
-		<Unit filename="/home/jin/project/DLCPP/src/slp/single_perceptron.cpp">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.cpp">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
-		<Unit filename="/home/jin/project/DLCPP/src/slp/single_perceptron.h">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/src/slp/single_perceptron.h">
 			<Option target="LIB_CPPDL"/>
 		</Unit>
-		<Unit filename="/home/jin/project/DLCPP/CMakeLists.txt">
+		<Unit filename="/home/gf/GFProject/LIB_CPPDL/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

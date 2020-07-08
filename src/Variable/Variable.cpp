@@ -154,3 +154,56 @@ void Variable::zeros() {
     this -> creator = NULL;
 }
 
+void Variable::creatorSet(Function *f) {
+    this -> creator = f;
+}
+
+void Variable::backward() {
+    this -> grad = seed;
+    this -> backward(this);
+}
+
+void Variable::backward(Variable *v) {
+    if (v == NULL) return;
+
+    if (v -> creator != NULL) {
+        if (v -> last_opt != NULL && v -> opt == *v -> last_opt) {
+            *v -> is_last_backward = true;
+        }
+
+        if (v -> forward_count > 0) v -> forward_count--;
+
+        if (v -> is_last_backward != NULL && *v -> is_last_backward == false) return;
+
+        if (v -> forward_count != 0) return;
+
+        v -> creator -> backward(v -> grad);
+
+        for (int i = 0; i < v -> creator -> inputs.size(); i++) {
+            PVariable nv = v -> creator -> inputs[i];
+
+            if (nv -> isGetGrad) this -> backward(nv.get());
+        }
+
+    }
+}
+
+void Variable::zero_grads() {
+    this -> zero_grads(this);
+}
+
+void Variable::zero_grads(Variable *v) {
+    if (v == NULL) return;
+
+    v -> grad.mul(0, v-> grad);
+    v -> forward_count = 0;
+
+    if (v -> creator != NULL) {
+        for (int i = 0; i < v -> creator -> inputs.size(); i++) {
+            PVariable nv = v -> creator -> inputs[i];
+            this -> zero_grads(nv.get());
+        }
+    }
+}
+
+
