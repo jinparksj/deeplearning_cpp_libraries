@@ -1,6 +1,8 @@
 #include <iostream>
 //#include "example_slp.h"
-#include "src/Variable/Variable.h"
+//#include "src/Variable/Variable.h"
+
+
 
 int main() {
 //    ExampleSLP();

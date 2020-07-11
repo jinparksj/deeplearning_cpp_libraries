@@ -35,5 +35,5 @@
     - dim3 grid(DIM, DIM)
     - dim3 is not standard C type
     - It is defined for convenient usage of capsulizing tuple of multidimensional elements by CUDA run-time headers
-    - dim3  
+
 
