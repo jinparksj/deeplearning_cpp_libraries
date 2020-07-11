@@ -8,3 +8,5 @@
 
 - slp_example
 
+- cuda_repo
+

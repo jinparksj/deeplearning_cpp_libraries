@@ -114,7 +114,7 @@
 
 - **Kernel Function**
     - Should define kernel functions as __ global __
-    - When call the kernel fucntions, <<< (blocks per grid), (threads per blocks) >>>
+    - When call the kernel functions, <<< (blocks per grid), (threads per blocks) >>>
     - Block is a group of threads
     - Grid is a group of blocks
 
