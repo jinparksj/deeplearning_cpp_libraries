@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/LIB_CPPDL.dir/main.cpp.o"
-  "CMakeFiles/LIB_CPPDL.dir/src/Variable/Variable.cpp.o"
   "CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o"
-  "LIB_CPPDL"
+  "CMakeFiles/LIB_CPPDL.dir/src/Variable/Variable.cpp.o"
   "LIB_CPPDL.pdb"
+  "LIB_CPPDL"
 )
 
 # Per-language clean rules from dependency scanning.

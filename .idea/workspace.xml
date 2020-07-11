@@ -11,9 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="a4423f78-7e50-4d78-9245-06347a676461" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
     <list default="true" id="a4423f78-7e50-4d78-9245-06347a676461" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+>>>>>>> fe46670e7f130cd4b7f9808330adadc1dd9bfa65
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +74,9 @@
       <option name="presentableId" value="Default" />
       <updated>1593625187557</updated>
       <workItem from="1593625192057" duration="10431000" />
+<<<<<<< HEAD
+      <workItem from="1593706059613" duration="3321000" />
+=======
       <workItem from="1593706059613" duration="2712000" />
       <workItem from="1593812057361" duration="1203000" />
       <workItem from="1593814351031" duration="514000" />
@@ -81,8 +89,13 @@
       <workItem from="1593889658212" duration="4931000" />
       <workItem from="1593911799194" duration="10651000" />
       <workItem from="1593988182116" duration="791000" />
+<<<<<<< HEAD
       <workItem from="1593997717992" duration="9241000" />
       <workItem from="1594017648683" duration="17000" />
+=======
+      <workItem from="1593997717992" duration="9089000" />
+>>>>>>> fe46670e7f130cd4b7f9808330adadc1dd9bfa65
+>>>>>>> 61de1b00603201f0da0f847f709a44c76f29b9ec
     </task>
     <servers />
   </component>
