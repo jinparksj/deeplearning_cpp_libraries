@@ -14,6 +14,8 @@ include_directories("${CUDA_INCLUDE_DIRS}")
 
 add_executable(
         LIB_CPPDL main.cpp
+        src/slp/single_perceptron.h
+        src/slp/single_perceptron.cpp
 )
 
 #src/slp/single_perceptron.h
