@@ -17,6 +17,11 @@
 #ifndef __BOOK_H__
 #define __BOOK_H__
 #include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <driver_types.h>
+#include <cuda_runtime_api.h>
+#include <device_launch_parameters.h>
 
 static void HandleError( cudaError_t err,
                          const char *file,
@@ -210,8 +215,5 @@ void wait_for_threads( const CUTThread *threads, int num );
     }
 
 #endif
-
-
-
 
 #endif  // __BOOK_H__
