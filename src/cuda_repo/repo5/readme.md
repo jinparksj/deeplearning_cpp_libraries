@@ -84,7 +84,7 @@
       int tid_y = threadIdx.y + blockIdx.y * blockDim.y;
       int tid_offset = x + y * blockDim.x * gridDim.x;
       ``` 
-            
+    - tid_offset: output buffer offset -> it should be linearized like vector operation        
         
         
         
