@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/LIB_CPPDL.dir/main.cpp.o  -o LIB_CPPDL 
+/usr/bin/c++  -g   CMakeFiles/LIB_CPPDL.dir/main.cpp.o CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o  -o LIB_CPPDL 

@@ -48,10 +48,10 @@ RM = /home/jin/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jin/project/deeplearning_cpp_libraries
+CMAKE_SOURCE_DIR = /home/jin/project/DLCPP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jin/project/deeplearning_cpp_libraries/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jin/project/DLCPP/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jin/project/deeplearning_cpp_libraries/cmake-build-debug/CMakeFiles /home/jin/project/deeplearning_cpp_libraries/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jin/project/DLCPP/cmake-build-debug/CMakeFiles /home/jin/project/DLCPP/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jin/project/deeplearning_cpp_libraries/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jin/project/DLCPP/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/slp/single_perceptron.o: src/slp/single_perceptron.cpp.o
+
+.PHONY : src/slp/single_perceptron.o
+
+# target to build an object file
+src/slp/single_perceptron.cpp.o:
+	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.o
+.PHONY : src/slp/single_perceptron.cpp.o
+
+src/slp/single_perceptron.i: src/slp/single_perceptron.cpp.i
+
+.PHONY : src/slp/single_perceptron.i
+
+# target to preprocess a source file
+src/slp/single_perceptron.cpp.i:
+	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.i
+.PHONY : src/slp/single_perceptron.cpp.i
+
+src/slp/single_perceptron.s: src/slp/single_perceptron.cpp.s
+
+.PHONY : src/slp/single_perceptron.s
+
+# target to generate assembly for a file
+src/slp/single_perceptron.cpp.s:
+	$(MAKE) -f CMakeFiles/LIB_CPPDL.dir/build.make CMakeFiles/LIB_CPPDL.dir/src/slp/single_perceptron.cpp.s
+.PHONY : src/slp/single_perceptron.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/slp/single_perceptron.o"
+	@echo "... src/slp/single_perceptron.i"
+	@echo "... src/slp/single_perceptron.s"
 .PHONY : help
 
 
