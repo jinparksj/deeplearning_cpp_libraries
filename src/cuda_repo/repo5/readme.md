@@ -86,7 +86,33 @@
       ``` 
     - tid_offset: output buffer offset -> it should be linearized like vector operation        
         
-        
+- Reasons why blocks divide to several threads?
+    - CUDA C Shared Memory
+    - __ shared __
+    - CUDA C compiler generates copies of variables for each blocks running in GPU
+    - Threads in each block can share memory. But, they cannot modify copies of variables in other blocks.
+    - Shared memory provides a way of communicating and cooperating between threads in blocks
+    - Shared memory buffer is in GPU physically
+    - Communication and synchronization between threads are important due to race condition
+    
+- Shared Memory Buffer
+    - __ shared __ floar cache[threadsPerBlock];
+        - Shared memory buffer: This buffer is used for results of operating by threads
+        - It looks like 'static' or 'volatile' at standard C
+    - The offset of shared memory cache is just thread index
+        - int chacheIndex = threadIdx.x;
+        - The shared memory offset doesn't need to include blockIdx
+        - Because each block has a copy of this shared memory
+    - If input vector size is not multiple of threads in the block, there is a possibility not to use some of shared memory
+
+- __ syncthreads() : Before reading values from shared memory buffer, it should be checked whether the task that shared memory is written is done.   
+    syncthreads() guarantees the task is done.
+
+- Reduction: Parallel computing
+    - time complexity is reduced from O(N) to O(logN) due to parallel computing
+    - Example:
+        - threadsPerBlock: 256
+        -      
         
 - Compile Command
     - **nvcc -o main main.cpp -lGL -lglut -x cu**

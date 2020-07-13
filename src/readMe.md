@@ -1,12 +1,18 @@
 ## Source
 
+- common
+
+- cuda_repo: CUDA examples and explanation
+
 - cudaMat
 
 - Function
 
+- img
+
 - Variable
 
-- slp_example
+- slp: single layer perceptron
 
-- cuda_repo
+
 
