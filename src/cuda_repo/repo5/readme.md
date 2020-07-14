@@ -110,9 +110,30 @@
 
 - Reduction: Parallel computing
     - time complexity is reduced from O(N) to O(logN) due to parallel computing
-    - Example:
-        - threadsPerBlock: 256
-        -      
+
+- Why Device(GPU) returns control authority to Host (CPU), even though inner product - reduction operation - is not finished in GPU?
+    - Inner product is reduction operation
+    - The number of input is larger than the number of output -> The characteristics of 'reduction'
+    - Inner product always returns one output no matter how many inputs are
+    - GPU, like big parallel operating device, spends too much resources at final stage of 'reduction'
+    - Because the size of data set is way smaller than the beginning of operation
+    - So, it is better for Host - CPU - to finalize the operation to save resources in GPU
+    - Instead of finalizing the reduction operation, GPU can spend other tasks efficiently
+
+- REMEMBER in this repo
+    - Allocate host and device memory
+    - By using cudaMemcpy(), copy a[] and b[] - CPU host array - to GPU device memory
+    - Predefine threads per block and blocks per grid
+    - Decide blocks per grid: min(32, (N + threadsPerBlocks - 1) / threadsPerBlocks) //N: the number of data elements
+
+- __ syncthread()
+    - CUDA Architecture guarantees,
+        - Hold any thread tasks by __ syncthread(), if there are any threads, still running in GPU
+        - Some threads should wait for that other threads are done
+    - Before running next instruction, it guarantees that data is ready 
+    
+    
+             
         
 - Compile Command
     - **nvcc -o main main.cpp -lGL -lglut -x cu**
