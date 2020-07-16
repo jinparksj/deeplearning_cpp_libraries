@@ -3,6 +3,8 @@
 - **07/01/2020 - Update Single Layer Perceptron**
 - **07/03/2020 - Ongoing Variable, cudaMat, Functions**
 - **07/05/2020 - Variable**
+- **07/07/2020 ~ 07/12/2020 - src/cuda_repo/repo5 for CUDA C**
+- **07/15/2020 ~ - src/cuda_repo/repo6 for CUDA C**
 
 - **__ restrict __ in CUDA / Pointer Aliasing**
     - It is an optimizing way for pointer aliasing

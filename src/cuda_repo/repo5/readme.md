@@ -4,6 +4,15 @@
     - How to call CUDA C Thread 
     - How to communicate between threads
     - How to synchronize threads running in parallel
+    - Wave Julia Set
+    ![repo5_example_thread_wave](../../img/repo5_thread_wave.png)
+    
+    - __ syncthreads() performance
+        - No Synchronize Threads
+            ![No syncthreads](../../img/repo5_no_syncthreads.png)
+           
+        - Synchronize Threads
+            ![syncthreads](../../img/repo5_syncthreads.png)    
 
 - The number of Kernel copies is limited up to 65563 in my setting of CUDA and GPU.
 
