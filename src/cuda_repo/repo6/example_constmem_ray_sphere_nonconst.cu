@@ -4,9 +4,9 @@
 #include "../../common/cpu_bitmap.h"
 
 #define RAND_MAX 2147483647
-#define rnd(x) (x * rand() / RAND_MAX)
+#define rnd( x ) (x * rand() / RAND_MAX)
 #define INF 2e10f
-#define SPHERES 20
+#define SPHERES 100
 #define DIM 1024
 
 
@@ -31,9 +31,9 @@ struct Sphere {
     }
 };
 
-Sphere *s;
 
-__global__ void kernel(unsigned char *ptr) {
+
+__global__ void kernel(unsigned char *ptr, Sphere *s) {
     //threadIdx / blockIdx -> set pixel location
     int x = threadIdx.x + blockIdx.x * blockDim.x;
     int y = threadIdx.y + blockIdx.y * blockDim.y;
@@ -61,7 +61,7 @@ __global__ void kernel(unsigned char *ptr) {
 
 }
 
-
+Sphere *s;
 
 void EXAMPLE_CONSTMEM_RAYSPHERE_REPO6() {
     //capture start time
@@ -99,8 +99,14 @@ void EXAMPLE_CONSTMEM_RAYSPHERE_REPO6() {
 
     dim3 blocks(DIM/16, DIM/16);
     dim3 threads(16, 16);
-    kernel<<<blocks, threads>>> (dev_bitmap);
+    kernel<<<blocks, threads>>> (dev_bitmap, s);
 
+    HANDLE_ERROR(cudaMemcpy(bitmap.get_ptr(), dev_bitmap, bitmap.image_size(), cudaMemcpyDeviceToHost));
+
+    bitmap.display_and_exit();
+
+    cudaFree(dev_bitmap);
+    cudaFree(s);
 
 
 }

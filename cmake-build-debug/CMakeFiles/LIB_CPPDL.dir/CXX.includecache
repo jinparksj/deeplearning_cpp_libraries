@@ -9,11 +9,27 @@
 /home/jin/project/DLCPP/main.cpp
 iostream
 -
-src/cuda_repo/repo5/5_thread_1.cu
-/home/jin/project/DLCPP/src/cuda_repo/repo5/5_thread_1.cu
+src/cuda_repo/repo6/example_constmem_ray_sphere_performance_const.cu
+/home/jin/project/DLCPP/src/cuda_repo/repo6/example_constmem_ray_sphere_performance_const.cu
+
+/home/jin/project/DLCPP/src/common/GL/glext.h
+windows.h
+-
+stddef.h
+-
+
+/home/jin/project/DLCPP/src/common/GL/glut.h
+windows.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
 
 /home/jin/project/DLCPP/src/common/book.h
 stdio.h
+-
+iostream
 -
 stdlib.h
 -
@@ -28,17 +44,33 @@ windows.h
 pthread.h
 -
 
-/home/jin/project/DLCPP/src/cuda_repo/repo5/5_thread_1.cu
+/home/jin/project/DLCPP/src/common/cpu_bitmap.h
+gl_helper.h
+/home/jin/project/DLCPP/src/common/gl_helper.h
+
+/home/jin/project/DLCPP/src/common/gl_helper.h
+GL/glut.h
+/home/jin/project/DLCPP/src/common/GL/glut.h
+GL/glext.h
+/home/jin/project/DLCPP/src/common/GL/glext.h
+GLUT/glut.h
+-
+GL/glut.h
+-
+GL/glext.h
+-
+GL/glx.h
+-
+
+/home/jin/project/DLCPP/src/cuda_repo/repo6/example_constmem_ray_sphere_performance_const.cu
+stdlib.h
+-
+cuda.h
+/home/jin/project/DLCPP/src/cuda_repo/repo6/cuda.h
 ../../common/book.h
 /home/jin/project/DLCPP/src/common/book.h
-
-/home/jin/project/DLCPP/src/slp/single_perceptron.cpp
-single_perceptron.h
-/home/jin/project/DLCPP/src/slp/single_perceptron.h
-
-/home/jin/project/DLCPP/src/slp/single_perceptron.h
-iostream
--
+../../common/cpu_bitmap.h
+/home/jin/project/DLCPP/src/common/cpu_bitmap.h
 
 /usr/local/cuda-9.0/targets/x86_64-linux/include/builtin_types.h
 device_types.h
@@ -53,6 +85,12 @@ vector_types.h
 /usr/local/cuda-9.0/targets/x86_64-linux/include/vector_types.h
 
 /usr/local/cuda-9.0/targets/x86_64-linux/include/crt/host_defines.h
+
+/usr/local/cuda-9.0/targets/x86_64-linux/include/cuda.h
+stdlib.h
+-
+stdint.h
+-
 
 /usr/local/cuda-9.0/targets/x86_64-linux/include/cuda_device_runtime_api.h
 driver_types.h
