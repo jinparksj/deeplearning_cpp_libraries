@@ -31,9 +31,9 @@ struct Sphere {
     }
 };
 
+__constant__ Sphere s[SPHERES];
 
-
-__global__ void kernel(unsigned char *ptr, Sphere *s) {
+__global__ void kernel(unsigned char *ptr) {
     //threadIdx / blockIdx -> set pixel location
     int x = threadIdx.x + blockIdx.x * blockDim.x;
     int y = threadIdx.y + blockIdx.y * blockDim.y;
@@ -64,21 +64,13 @@ __global__ void kernel(unsigned char *ptr, Sphere *s) {
 //Sphere *s;
 
 
-void EXAMPLE_CONSTMEM_RAYSPHERE_REPO6(Sphere *s) {
+void EXAMPLE_CONSTMEM_RAYSPHERE_REPO6() {
     //capture start time
-    cudaEvent_t start, stop;
-    HANDLE_ERROR(cudaEventCreate(&start));
-    HANDLE_ERROR(cudaEventCreate(&stop));
-    HANDLE_ERROR(cudaEventRecord(start, 0));
-
     CPUBitmap bitmap(DIM, DIM);
     unsigned char *dev_bitmap;
 
     //Allocate GPU memory for output bitmap
     HANDLE_ERROR(cudaMalloc((void**)&dev_bitmap, bitmap.image_size()));
-
-    //Allocate sphere image memory
-//    HANDLE_ERROR(cudaMalloc((void**)&s, sizeof(Sphere) * SPHERES));
 
     //Allocate temporary sphere memory and initialize it
     Sphere *temp_s = (Sphere *) malloc(sizeof(Sphere) * SPHERES);
@@ -95,20 +87,17 @@ void EXAMPLE_CONSTMEM_RAYSPHERE_REPO6(Sphere *s) {
 
     //Copy sphere memory from Host to GPU
     //remove memory
-//    HANDLE_ERROR(cudaMemcpy(s, temp_s, sizeof(Sphere) * SPHERES, cudaMemcpyHostToDevice));
     HANDLE_ERROR(cudaMemcpyToSymbol(s, temp_s, sizeof(Sphere) * SPHERES));
     free(temp_s);
 
     dim3 blocks(DIM/16, DIM/16);
     dim3 threads(16, 16);
-    kernel<<<blocks, threads>>> (dev_bitmap, s);
+    kernel<<<blocks, threads>>> (dev_bitmap);
 
     HANDLE_ERROR(cudaMemcpy(bitmap.get_ptr(), dev_bitmap, bitmap.image_size(), cudaMemcpyDeviceToHost));
 
     bitmap.display_and_exit();
 
     cudaFree(dev_bitmap);
-
-
 
 }

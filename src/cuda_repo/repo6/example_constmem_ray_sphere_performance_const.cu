@@ -29,7 +29,9 @@ struct Sphere {
     }
 };
 
-__global__ void kernel(unsigned char *ptr, Sphere *s) {
+__constant__ Sphere s[SPHERES];
+
+__global__ void kernel(unsigned char *ptr) {
     //threadIdx / blockIdx -> set pixel location
     int x = threadIdx.x + blockIdx.x * blockDim.x;
     int y = threadIdx.y + blockIdx.y * blockDim.y;
@@ -58,7 +60,7 @@ __global__ void kernel(unsigned char *ptr, Sphere *s) {
 }
 
 //Sphere *s;
-__constant__ Sphere s[SPHERES];
+
 
 void EXAMPLE_CONSTMEM_RAYSPHERE_PERFORMANCE_CONST_REPO6() {
     //capture start time
@@ -97,7 +99,7 @@ void EXAMPLE_CONSTMEM_RAYSPHERE_PERFORMANCE_CONST_REPO6() {
 
     dim3 blocks(DIM/16, DIM/16);
     dim3 threads(16, 16);
-    kernel<<<blocks, threads>>> (dev_bitmap, s);
+    kernel<<<blocks, threads>>> (dev_bitmap);
 
     HANDLE_ERROR(cudaMemcpy(bitmap.get_ptr(), dev_bitmap, bitmap.image_size(), cudaMemcpyDeviceToHost));
 
