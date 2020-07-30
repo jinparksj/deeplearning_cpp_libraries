@@ -1,7 +1,7 @@
 import serial
 import time
 
-sp = serial.Serial(port="dev/ttyTHS1", baudrate=9600, timeout=2)
+sp = serial.Serial(port="/dev/ttyTHS1", baudrate=9600, timeout=2)
 time.sleep(1)
 sp.flushOutput()
 sp.flushInput()
